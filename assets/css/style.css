@@ -251,6 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   #hero {
     padding-left: 160px;
   }
+}
 @media (min-width: 425px) {
   #hero {
     background: url("../img/hero-bg.jpg") top right no-repeat;
@@ -259,6 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
   }
+}
 
 #hero:before {
   content: "";
