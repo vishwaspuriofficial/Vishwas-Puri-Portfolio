@@ -1,6 +1,6 @@
-Photo on top cover!
-
-Fix up Resume
+Change photo height on about section
+Add Download Resume Button
 
 Later:
 	Get References and Quotes
+	Banner Section for upcoming 
