@@ -1,6 +1,3 @@
-Change photo height on about section
-Add Download Resume Button
-
 Later:
 	Get References and Quotes
 	Banner Section for upcoming 
