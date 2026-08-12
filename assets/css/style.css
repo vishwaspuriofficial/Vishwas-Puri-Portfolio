@@ -432,8 +432,84 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills Modern Cards & Pill Badges
 --------------------------------------------------------------*/
+.skills .skill-category-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 22px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(69, 80, 91, 0.07);
+  transition: all 0.3s ease-in-out;
+  border-top: 4px solid #0563bb;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills .skill-category-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(5, 99, 187, 0.14);
+}
+
+.skills .skill-category-card.card-blue { border-top-color: #0563bb; }
+.skills .skill-category-card.card-teal { border-top-color: #11dbcf; }
+.skills .skill-category-card.card-purple { border-top-color: #7047eb; }
+.skills .skill-category-card.card-orange { border-top-color: #ff7d3b; }
+.skills .skill-category-card.card-indigo { border-top-color: #6366f1; }
+
+.skills .skill-category-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #45505b;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills .card-blue .skill-category-title i { color: #0563bb; }
+.skills .card-teal .skill-category-title i { color: #0db5ab; }
+.skills .card-purple .skill-category-title i { color: #7047eb; }
+.skills .card-orange .skill-category-title i { color: #ff7d3b; }
+.skills .card-indigo .skill-category-title i { color: #6366f1; }
+
+.skills .skill-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills .skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f4f7fa;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 25px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease-in-out;
+  cursor: default;
+}
+
+.skills .skill-pill i {
+  font-size: 16px;
+}
+
+.skills .skill-pill:hover {
+  background: #0563bb;
+  color: #ffffff;
+  border-color: #0563bb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.25);
+}
+
+.skills .skill-pill:hover i {
+  color: #ffffff;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
