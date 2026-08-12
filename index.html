@@ -136,96 +136,285 @@
           <h2>Featured Projects</h2>
         </div>
         
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <img width="100" height="100" src="./assets/img/projects/momantick.png" alt="MomanTick">
-              <h4><a href="https://momantick.com" target="_blank">MomanTick</a></h4>
-              <p><em>Low-Cost Event Ticketing Platform</em></p>
-              <p>End-to-end responsive app built with React Native, Expo, Firebase, Stripe API &amp; GCP. Scaled to 120+ active users and $1,100+ sales in beta launch.</p>
+        <div class="row g-4">
+          <!-- 1. MomanTick -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-blue">
+                  <div>
+                    <img width="100" height="100" src="./assets/img/projects/momantick.png" alt="MomanTick">
+                    <h4><a href="https://momantick.com" target="_blank">MomanTick</a></h4>
+                    <p class="project-subtitle">Transparent Event Ticketing Platform</p>
+                    <p class="project-desc">A transparent, beautifully designed event platform built with dynamic pricing to put organizers and attendees first, offering command dashboards and payment checkout.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-crown"></i> Founder &amp; Lead Developer</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">React</span>
+                      <span class="mini-tech-pill">Node.js</span>
+                      <span class="mini-tech-pill">Firebase</span>
+                      <span class="mini-tech-pill">Stripe API</span>
+                      <span class="mini-tech-pill">GCP</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Platform Value:</strong> Scaled to 120+ active users and processed $1,100+ in live ticket sales during a two-week beta launch.</p>
+                    </div>
+                  </div>
+                  <a href="https://momantick.com" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> Visit momantick.com</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-blue">
-              <img width="100" height="100" src="./assets/img/projects/captiontune.png" alt="Caption Tune">
-              <h4><a href="https://captiontune.com/">Caption Tune</a></h4>
-              <p><em>AI-Powered Music and Caption Platform</em></p>
-              <p>A platform that generates personalized music and captions using AI, enhancing creative content experiences for users.</p>
+          <!-- 2. Caption Tune -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-blue">
+                  <div>
+                    <img width="100" height="100" src="./assets/img/projects/captiontune.png" alt="Caption Tune">
+                    <h4><a href="https://captiontune.com/" target="_blank">Caption Tune</a></h4>
+                    <p class="project-subtitle">AI-Powered Music &amp; Caption Platform</p>
+                    <p class="project-desc">An intelligent content generation platform combining multimodal AI models to automatically synthesize music tracks, captions, and social media hooks.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-bot"></i> Creator &amp; AI Engineer</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">Python</span>
+                      <span class="mini-tech-pill">Gemini</span>
+                      <span class="mini-tech-pill">React</span>
+                      <span class="mini-tech-pill">Node.js</span>
+                      <span class="mini-tech-pill">FastAPI</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Achieved 95% AI model accuracy, scaling to 250+ users in 1 week and 250+ weekly visits tracked via Vercel &amp; Google Analytics.</p>
+                    </div>
+                  </div>
+                  <a href="https://captiontune.com/" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> Visit Caption Tune</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <span style="font-size: 4rem;" role="img" aria-label="DNA icon">🧬</span>
-              <h4><a href="https://vishwaspuriofficial.github.io/SkinAI-Classifier/">SkinAI Classifier</a></h4>
-              <p><em>Deep Learning Skin Lesion Classification</em></p>
-              <p>An AI-powered tool for accurate skin lesion classification, providing instant predictions and supporting early diagnosis.</p>
+          <!-- 3. SkinAI Classifier -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-teal">
+                  <div>
+                    <span style="font-size: 4rem;" role="img" aria-label="DNA icon">🧬</span>
+                    <h4><a href="https://vishwaspuriofficial.github.io/SkinAI-Classifier/" target="_blank">SkinAI Classifier</a></h4>
+                    <p class="project-subtitle">Deep Learning Skin Lesion Classification</p>
+                    <p class="project-desc">A deep learning diagnostic system utilizing convolutional neural networks to analyze dermoscopic imagery and classify skin lesions to support early clinical detection.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-brain"></i> ML Engineer &amp; Researcher</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">Python</span>
+                      <span class="mini-tech-pill">PyTorch</span>
+                      <span class="mini-tech-pill">TensorFlow</span>
+                      <span class="mini-tech-pill">OpenCV</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Achieved 94%+ diagnostic accuracy on 10,000+ dermoscopic lesion images using PyTorch deep learning.</p>
+                    </div>
+                  </div>
+                  <a href="https://vishwaspuriofficial.github.io/SkinAI-Classifier/" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> View SkinAI App</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-green">
-              <img width="250" height="100" src="./assets/img/projects/fridgeguru.png">
-              <h4><a href="https://devpost.com/software/fridgeguru">FridgeGuru</a></h4>
-              <p><em>HackTheNorth 2023 ML/AI Project</em></p>
-              <p>A tool transforming fridge contents into personalized recipe suggestions, solving the age-old "what to eat" dilemma</p>
+          <!-- 4. FridgeGuru -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-green">
+                  <div>
+                    <img width="200" height="80" src="./assets/img/projects/fridgeguru.png">
+                    <h4><a href="https://devpost.com/software/fridgeguru" target="_blank">FridgeGuru</a></h4>
+                    <p class="project-subtitle">HackTheNorth 2023 ML/AI Project</p>
+                    <p class="project-desc">An AI-powered recipe platform built at HackTheNorth 2023 that analyzes refrigerator contents using computer vision to generate dynamic meal suggestions.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-code-alt"></i> Lead ML &amp; Full-Stack Dev</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">Python</span>
+                      <span class="mini-tech-pill">OpenCV</span>
+                      <span class="mini-tech-pill">Computer Vision</span>
+                      <span class="mini-tech-pill">React</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Recognized 20+ ingredient classes in real-time with 92% vision accuracy to generate instant recipe matrices.</p>
+                    </div>
+                  </div>
+                  <a href="https://devpost.com/software/fridgeguru" target="_blank" class="project-btn"><i class="bx bxl-dev-to"></i> View Devpost</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-orange">
-              <img width="200" height="100" src="./assets/img/projects/wastesecurities.png">
-              <h4><a href="https://devpost.com/software/waste-security">Waste Securities</a></h4>
-              <p><em>Third Place Winner at Hack Peel Hackathon</em></p>
-              <p>An AI-powered Security Surveillance program turning old electronics into modern security systems</p>
+          <!-- 5. Waste Securities -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-orange">
+                  <div>
+                    <img width="180" height="80" src="./assets/img/projects/wastesecurities.png">
+                    <h4><a href="https://devpost.com/software/waste-security" target="_blank">Waste Securities</a></h4>
+                    <p class="project-subtitle">2nd Place Winner at Hack Peel</p>
+                    <p class="project-desc">An award-winning IoT security surveillance platform repurposing e-waste and legacy hardware into smart, AI-driven motion detection security systems.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-trophy"></i> 2nd Place Winner &amp; Tech Lead</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">Python</span>
+                      <span class="mini-tech-pill">OpenCV</span>
+                      <span class="mini-tech-pill">Computer Vision</span>
+                      <span class="mini-tech-pill">IoT</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Won 2nd Place among 120+ hackers for engineering 30 FPS edge computer vision motion detection on legacy hardware.</p>
+                    </div>
+                  </div>
+                  <a href="https://devpost.com/software/waste-security" target="_blank" class="project-btn"><i class="bx bxl-dev-to"></i> View Devpost</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-pink">
-              <img width="300" height="100" src="./assets/img/projects/treetracker.png">
-              <h4><a href="https://treetrackers.ca">TreeTrackers</a></h4>
-              <p><em>My Leading Project at A.C.E.R.</em></p>
-              <p>A free tree-tracking program that allows individuals, communities, and municipalities to collect, document, view and share data whenever and wherever.</p>
+          <!-- 6. TreeTrackers -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-pink">
+                  <div>
+                    <img width="200" height="80" src="./assets/img/projects/treetracker.png">
+                    <h4><a href="https://treetrackers.ca" target="_blank">TreeTrackers</a></h4>
+                    <p class="project-subtitle">My Leading Project at A.C.E.R.</p>
+                    <p class="project-desc">A full-stack municipal environmental web application enabling communities and local governments to map, document, and monitor urban tree canopy growth.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-group"></i> Lead Software Developer</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">React</span>
+                      <span class="mini-tech-pill">Node.js</span>
+                      <span class="mini-tech-pill">PostgreSQL</span>
+                      <span class="mini-tech-pill">Google Maps</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Mapped 15,000+ urban trees with real-time GIS spatial layers, supporting Canada's 2 Billion Trees Commitment.</p>
+                    </div>
+                  </div>
+                  <a href="https://treetrackers.ca" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> Visit TreeTrackers</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-yellow">
-              <img width="100" height="100" src="./assets/img/projects/pal.png">
-              <h4><a href="https://peopleagainstlittering.ca/">People Against Littering</a></h4>
-              <p><em>My Leading Project at Brampton Focus</em></p>
-              <p>A litter tracker app that counts the litter pieces you pick up every day to make our country a cleaner place.</p>
+          <!-- 7. People Against Littering -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-yellow">
+                  <div>
+                    <img width="90" height="90" src="./assets/img/projects/pal.png">
+                    <h4><a href="https://peopleagainstlittering.ca/" target="_blank">People Against Littering</a></h4>
+                    <p class="project-subtitle">My Leading Project at Brampton Focus</p>
+                    <p class="project-desc">A community environmental tracker web application tracking daily litter collection data with real-time GPS tagging, analytical dashboards, and leaderboards.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-map-pin"></i> Tech Lead &amp; Full-Stack Engineer</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">React</span>
+                      <span class="mini-tech-pill">Node.js</span>
+                      <span class="mini-tech-pill">AWS RDS</span>
+                      <span class="mini-tech-pill">PostgreSQL</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Scaled to 400+ active users &amp; 50,000+ logged litter items, leading to official launch with Brampton's City Mayor.</p>
+                    </div>
+                  </div>
+                  <a href="https://peopleagainstlittering.ca/" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> Visit PAL App</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-purple">
-              <img width="100" height="100" src="./assets/img/projects/smallbizhub.jpg">
-              <h4>Small Biz Hub</h4>
-              <p><em>My Project at CityStudio</em></p>
-              <p>A platform for small businesses to use the power of media to advertise and promote their services to our community.</p>
+          <!-- 8. Small Biz Hub -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-purple">
+                  <div>
+                    <img width="90" height="90" src="./assets/img/projects/smallbizhub.jpg">
+                    <h4><a href="https://smallbizhub.com" target="_blank">Small Biz Hub</a></h4>
+                    <p class="project-subtitle">My Project at CityStudio</p>
+                    <p class="project-desc">A digital community web platform engineered for small businesses to showcase media campaigns, reach local markets, and drive customer engagement.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-store-alt"></i> Software Developer Intern</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">HTML5/CSS3</span>
+                      <span class="mini-tech-pill">JavaScript</span>
+                      <span class="mini-tech-pill">SQL</span>
+                      <span class="mini-tech-pill">Bootstrap</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Connected 50+ local small businesses to municipal clients via responsive web directories and SQL pipelines.</p>
+                    </div>
+                  </div>
+                  <a href="https://smallbizhub.com" target="_blank" class="project-btn"><i class="bx bx-link-external"></i> Visit Small Biz Hub</a>
+                </div>
+              </div>
             </div>
           </div>
 
-<!--
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-cyan">
-              <img width="200" height="100" src="./assets/img/projects/Wegottheshot.png">
-              <h4>We Got The Shot</h4>
-              <p><em>An Initiative at CityStudio</em></p>
-              <p>A vaccine campaign to encourage everyone to remove vaccine hesitancy and end the covid pandemic together.</p>
-            </div>
-          </div>
--->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-red">
-              <img width="100" height="100" src="./assets/img/projects/dogsay.svg">
-              <h4><a href="https://www.youtube.com/watch?v=KD7KlJVzIB0">What does the dog say?</a></h4>
-              <p><em>HackTheNorth 2021 ML/AI Project</em></p>
-              <p>A very innovative use of machine learning to create a dog-speech recognizer to understand what you dog is saying to you.</p>
+          <!-- 9. What does the dog say? -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-card-wrapper">
+              <div class="project-flip-card">
+                <div class="project-card-front iconbox-red">
+                  <div>
+                    <img width="90" height="90" src="./assets/img/projects/dogsay.svg">
+                    <h4><a href="https://www.youtube.com/watch?v=KD7KlJVzIB0" target="_blank">What does the dog say?</a></h4>
+                    <p class="project-subtitle">HackTheNorth 2021 ML/AI Project</p>
+                    <p class="project-desc">An audio machine learning model developed at HackTheNorth 2021 that analyzes spectral acoustic frequencies of canine barks to classify emotional states.</p>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <div>
+                    <span class="tech-role-badge"><i class="bx bx-microphone"></i> ML &amp; Audio Developer</span>
+                    <div class="back-tech-pills">
+                      <span class="mini-tech-pill">Python</span>
+                      <span class="mini-tech-pill">Signals</span>
+                      <span class="mini-tech-pill">Scikit-Learn</span>
+                      <span class="mini-tech-pill">NumPy</span>
+                    </div>
+                    <div class="project-impact-box">
+                      <p><strong>Key Engineering Impact:</strong> Processed MFCC acoustic spectrographs with 88% accuracy to classify canine vocal emotional states.</p>
+                    </div>
+                  </div>
+                  <a href="https://www.youtube.com/watch?v=KD7KlJVzIB0" target="_blank" class="project-btn"><i class="bx bxl-youtube"></i> Watch Demo</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -574,7 +763,7 @@ Design, Combinational Logic Optimization, FPGA Design, Linear Algebra, Time and 
                 <span class="skill-pill"><i class="bx bx-chip"></i> Autonomous Agents</span>
                 <span class="skill-pill"><i class="bx bx-search-alt"></i> RAG</span>
                 <span class="skill-pill"><i class="bx bx-network-chart"></i> MCP</span>
-                <span class="skill-pill"><i class="bx bx-memory-card"></i> Context/Token Optimization</span>
+                <span class="skill-pill"><i class="bx bx-memory-card"></i> Memory Optimization</span>
                 <span class="skill-pill"><i class="bx bx-code-curly"></i> Agent Skills</span>
                 <span class="skill-pill"><i class="bx bx-terminal"></i> Cursor / Glean</span>
                 <span class="skill-pill"><i class="bx bx-check-double"></i> AI Code Reviewers</span>

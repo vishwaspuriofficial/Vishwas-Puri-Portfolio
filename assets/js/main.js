@@ -304,4 +304,12 @@
     }
   });
 
+  /**
+   * Mobile touch / click toggle for 3D Project Flip Cards
+   */
+  on('click', '.project-card-wrapper', function(e) {
+    if (e.target.closest('a')) return;
+    this.classList.toggle('flipped');
+  }, true);
+
 })()

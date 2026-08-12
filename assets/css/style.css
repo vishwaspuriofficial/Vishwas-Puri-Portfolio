@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #f2f3f5;
+  background: transparent;
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -1168,6 +1168,16 @@ section {
   color: #0563bb;
 }
 
+@media (max-width: 1199.98px) {
+  .theme-toggle-btn {
+    top: 15px;
+    left: 15px;
+    right: auto;
+    width: 44px;
+    height: 44px;
+  }
+}
+
 /* Global Transition for Theme Switching */
 body, section, .icon-box, .skill-category-card, .count-box, .resume-item {
   transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -1195,6 +1205,10 @@ body.dark-theme .theme-toggle-btn:hover {
   border-color: #38bdf8;
 }
 
+body.dark-theme .mobile-nav-toggle i {
+  color: #f8fafc;
+}
+
 @media (min-width: 992px) {
   body.dark-theme #header {
     background: transparent;
@@ -1210,7 +1224,7 @@ body.dark-theme .theme-toggle-btn:hover {
 
 body.dark-theme .nav-menu a, 
 body.dark-theme .nav-menu a:focus {
-  background: #1e293b;
+  background: transparent;
   color: #cbd5e1;
 }
 
@@ -1375,4 +1389,338 @@ body.dark-theme .facts .count-box p {
 body.dark-theme #footer {
   background: #0b132b;
   color: #cbd5e1;
+}
+
+/*--------------------------------------------------------------
+# High-End 3D Flip Featured Project Cards
+--------------------------------------------------------------*/
+.project-card-wrapper {
+  perspective: 1200px;
+  width: 100%;
+  min-height: 295px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.project-flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.15s cubic-bezier(0.34, 1.2, 0.64, 1);
+  border-radius: 16px;
+}
+
+.project-card-wrapper:hover .project-flip-card,
+.project-card-wrapper.flipped .project-flip-card {
+  transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.project-card-wrapper:hover .project-card-front,
+.project-card-wrapper:hover .project-card-back {
+  box-shadow: 0 20px 40px -10px rgba(5, 99, 187, 0.15);
+  border-color: rgba(5, 99, 187, 0.3);
+}
+
+/* Front Face Elements */
+.project-card-front {
+  z-index: 2;
+  transform: translateZ(0);
+}
+
+.project-card-front img {
+  max-height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
+  transition: transform 0.4s ease;
+}
+
+.project-card-wrapper:hover .project-card-front img {
+  transform: scale(1.05);
+}
+
+.project-card-front h4 {
+  font-weight: 700;
+  font-size: 21px;
+  margin: 10px 0 6px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.project-card-front h4 a {
+  color: #0563bb;
+  transition: color 0.3s ease;
+}
+
+.project-card-front p.project-subtitle {
+  font-style: italic;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.project-card-front p.project-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* Back Face Elements & Theme Accents */
+.project-card-back {
+  transform: rotateY(180deg);
+  background: #f8fafc;
+  z-index: 1;
+}
+
+.tech-role-badge {
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: #0563bb;
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.25);
+  transform: translateZ(20px);
+}
+
+.back-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.mini-tech-pill {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.mini-tech-pill:hover {
+  background: #0563bb;
+  color: #ffffff;
+  border-color: #0563bb;
+}
+
+.project-impact-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #0563bb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334155;
+  margin-bottom: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.project-impact-box strong {
+  color: #0f172a;
+}
+
+.project-btn {
+  background: #0563bb;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.2);
+}
+
+.project-btn:hover {
+  background: #0678e3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(5, 99, 187, 0.35);
+}
+
+/* Color Accent Variations for Back Cards */
+.iconbox-teal + .project-card-back .tech-role-badge,
+.iconbox-teal + .project-card-back .project-btn {
+  background: #11dbcf;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(17, 219, 207, 0.3);
+}
+
+.iconbox-teal + .project-card-back .project-impact-box {
+  border-left-color: #11dbcf;
+}
+
+.iconbox-green + .project-card-back .tech-role-badge,
+.iconbox-green + .project-card-back .project-btn {
+  background: #18d26e;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(24, 210, 110, 0.3);
+}
+
+.iconbox-green + .project-card-back .project-impact-box {
+  border-left-color: #18d26e;
+}
+
+.iconbox-orange + .project-card-back .tech-role-badge,
+.iconbox-orange + .project-card-back .project-btn {
+  background: #ff7d3b;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 125, 59, 0.3);
+}
+
+.iconbox-orange + .project-card-back .project-impact-box {
+  border-left-color: #ff7d3b;
+}
+
+.iconbox-pink + .project-card-back .tech-role-badge,
+.iconbox-pink + .project-card-back .project-btn {
+  background: #e83e8c;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(232, 62, 140, 0.3);
+}
+
+.iconbox-pink + .project-card-back .project-impact-box {
+  border-left-color: #e83e8c;
+}
+
+.iconbox-yellow + .project-card-back .tech-role-badge,
+.iconbox-yellow + .project-card-back .project-btn {
+  background: #eab308;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+.iconbox-yellow + .project-card-back .project-impact-box {
+  border-left-color: #eab308;
+}
+
+.iconbox-purple + .project-card-back .tech-role-badge,
+.iconbox-purple + .project-card-back .project-btn {
+  background: #7047eb;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(112, 71, 235, 0.3);
+}
+
+.iconbox-purple + .project-card-back .project-impact-box {
+  border-left-color: #7047eb;
+}
+
+.iconbox-red + .project-card-back .tech-role-badge,
+.iconbox-red + .project-card-back .project-btn {
+  background: #ef4444;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.iconbox-red + .project-card-back .project-impact-box {
+  border-left-color: #ef4444;
+}
+
+/* Dark Mode Integration for 3D Flip Cards */
+body.dark-theme .project-card-front,
+body.dark-theme .project-card-back {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .project-card-wrapper:hover .project-card-front,
+body.dark-theme .project-card-wrapper:hover .project-card-back {
+  box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+}
+
+body.dark-theme .project-card-front h4 a {
+  color: #f8fafc;
+}
+
+body.dark-theme .project-card-front p.project-subtitle {
+  color: #38bdf8;
+}
+
+body.dark-theme .project-card-front p.project-desc {
+  color: #cbd5e1;
+}
+
+body.dark-theme .mini-tech-pill {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+body.dark-theme .mini-tech-pill:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: #38bdf8;
+}
+
+body.dark-theme .project-impact-box {
+  background: #0f172a;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+body.dark-theme .project-impact-box strong {
+  color: #f8fafc;
+}
+
+body.dark-theme .tech-role-badge {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+body.dark-theme .project-btn {
+  background: #38bdf8;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+body.dark-theme .project-btn:hover {
+  background: #7dd3fc;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45);
 }
