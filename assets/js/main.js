@@ -261,4 +261,47 @@
     })
   });
 
+  /**
+   * Dark Mode Theme System Logic
+   */
+  const themeToggleBtn = select('#theme-toggle');
+  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+
+  const updateThemeUI = (isDark) => {
+    if (isDark) {
+      document.body.classList.add('dark-theme');
+      document.documentElement.classList.add('dark-theme');
+      if (themeIcon) {
+        themeIcon.className = 'bx bx-sun';
+      }
+    } else {
+      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark-theme');
+      if (themeIcon) {
+        themeIcon.className = 'bx bx-moon';
+      }
+    }
+  };
+
+  // Initialize UI icon based on current state
+  const isInitiallyDark = document.body.classList.contains('dark-theme') || 
+                          document.documentElement.classList.contains('dark-theme');
+  updateThemeUI(isInitiallyDark);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDarkNow = document.body.classList.contains('dark-theme');
+      const newDarkState = !isDarkNow;
+      updateThemeUI(newDarkState);
+      localStorage.setItem('theme', newDarkState ? 'dark' : 'light');
+    });
+  }
+
+  // System color scheme change listener
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      updateThemeUI(e.matches);
+    }
+  });
+
 })()

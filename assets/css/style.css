@@ -402,6 +402,7 @@ section {
   position: relative;
   text-align: center;
   background: #fff;
+  border-radius: 16px;
 }
 .facts .count-box i {
   position: absolute;
@@ -571,6 +572,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 .resume .resume-item ul {
   padding-left: 20px;
@@ -790,10 +792,11 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
+  padding: 50px 20px 60px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  border-radius: 16px;
+  box-shadow: 0px 5px 30px 0px rgba(110, 123, 131, 0.08);
 }
 .services .icon-box .icon {
   margin: 0 auto;
@@ -1134,4 +1137,242 @@ section {
 }
 #footer .credits {
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Floating Theme Toggle Button & Dark Theme System
+--------------------------------------------------------------*/
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #45505b;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 20px rgba(5, 99, 187, 0.25);
+  color: #0563bb;
+}
+
+/* Global Transition for Theme Switching */
+body, section, .icon-box, .skill-category-card, .count-box, .resume-item {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Dark Theme Overrides */
+body.dark-theme {
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
+
+body.dark-theme #preloader {
+  background: #0f172a;
+}
+
+body.dark-theme .theme-toggle-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+@media (min-width: 992px) {
+  body.dark-theme #header {
+    background: transparent;
+    border-right: none;
+  }
+}
+@media (max-width: 992px) {
+  body.dark-theme #header {
+    background: #0f172a;
+    border-right: 1px solid #1e293b;
+  }
+}
+
+body.dark-theme .nav-menu a, 
+body.dark-theme .nav-menu a:focus {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+body.dark-theme .nav-menu a i {
+  color: #cbd5e1;
+}
+
+body.dark-theme .nav-menu a:hover, 
+body.dark-theme .nav-menu .active {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+body.dark-theme .nav-menu a:hover i, 
+body.dark-theme .nav-menu .active i,
+body.dark-theme .nav-menu a:hover span, 
+body.dark-theme .nav-menu .active span {
+  color: #0f172a;
+}
+
+body.dark-theme #hero {
+  background-color: #0f172a;
+}
+
+body.dark-theme #hero:before {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+body.dark-theme #hero h1 {
+  color: #f8fafc;
+}
+
+body.dark-theme #hero p {
+  color: #cbd5e1;
+}
+
+body.dark-theme #hero p span {
+  color: #38bdf8;
+}
+
+body.dark-theme #hero .social-links a {
+  color: #cbd5e1;
+}
+
+body.dark-theme #hero .social-links a:hover {
+  color: #38bdf8;
+}
+
+body.dark-theme section {
+  background-color: #0f172a;
+}
+
+body.dark-theme .section-bg {
+  background-color: #1e293b !important;
+}
+
+body.dark-theme .section-title h2 {
+  color: #f8fafc;
+}
+
+body.dark-theme .section-title h2::before {
+  background: #334155;
+}
+
+body.dark-theme .section-title h2::after {
+  background: #38bdf8;
+}
+
+body.dark-theme .section-title p {
+  color: #94a3b8;
+}
+
+body.dark-theme .about .content p {
+  color: #cbd5e1;
+}
+
+body.dark-theme .services .icon-box {
+  background: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+body.dark-theme .services .icon-box h4 a {
+  color: #f8fafc;
+}
+
+body.dark-theme .services .icon-box p {
+  color: #cbd5e1;
+}
+
+body.dark-theme .services .icon-box:hover {
+  border-color: #38bdf8;
+}
+
+body.dark-theme .resume .resume-title {
+  color: #f8fafc;
+}
+
+body.dark-theme .resume .resume-item {
+  border-left-color: #38bdf8;
+}
+
+body.dark-theme .resume .resume-item::before {
+  background: #0f172a;
+  border-color: #38bdf8;
+}
+
+body.dark-theme .resume .resume-item h4 {
+  color: #38bdf8;
+}
+
+body.dark-theme .resume .resume-item h5 {
+  background: #334155;
+  color: #f8fafc;
+}
+
+body.dark-theme .resume .resume-item p,
+body.dark-theme .resume .resume-item ul li {
+  color: #cbd5e1;
+}
+
+body.dark-theme .skills .skill-category-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .skills .skill-category-title {
+  color: #f8fafc;
+}
+
+body.dark-theme .skills .skill-pill {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark-theme .skills .skill-pill:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: #38bdf8;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
+}
+
+body.dark-theme .skills .skill-pill:hover i {
+  color: #0f172a;
+}
+
+body.dark-theme .facts .count-box {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+body.dark-theme .facts .count-box span {
+  color: #f8fafc;
+}
+
+body.dark-theme .facts .count-box p {
+  color: #cbd5e1;
+}
+
+body.dark-theme #footer {
+  background: #0b132b;
+  color: #cbd5e1;
 }

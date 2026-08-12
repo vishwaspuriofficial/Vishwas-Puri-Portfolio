@@ -35,9 +35,24 @@
 
   <script async src="https://tally.so/widgets/embed.js"></script>
 
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark-theme');
+        window.addEventListener('DOMContentLoaded', () => {
+          document.body.classList.add('dark-theme');
+        });
+      }
+    })();
+  </script>
 </head>
 
 <body>
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+    <i class="bx bx-moon"></i>
+  </button>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -132,20 +147,20 @@
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-teal">
-              <span style="font-size: 4rem;" role="img" aria-label="DNA icon">🧬</span>
-              <h4><a href="https://vishwaspuriofficial.github.io/SkinAI-Classifier/">SkinAI Classifier</a></h4>
-              <p><em>Deep Learning Skin Lesion Classification</em></p>
-              <p>An AI-powered tool for accurate skin lesion classification, providing instant predictions and supporting early diagnosis.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box iconbox-blue">
               <img width="100" height="100" src="./assets/img/projects/captiontune.png" alt="Caption Tune">
               <h4><a href="https://captiontune.com/">Caption Tune</a></h4>
               <p><em>AI-Powered Music and Caption Platform</em></p>
               <p>A platform that generates personalized music and captions using AI, enhancing creative content experiences for users.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <span style="font-size: 4rem;" role="img" aria-label="DNA icon">🧬</span>
+              <h4><a href="https://vishwaspuriofficial.github.io/SkinAI-Classifier/">SkinAI Classifier</a></h4>
+              <p><em>Deep Learning Skin Lesion Classification</em></p>
+              <p>An AI-powered tool for accurate skin lesion classification, providing instant predictions and supporting early diagnosis.</p>
             </div>
           </div>
 
